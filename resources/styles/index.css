@@ -1,0 +1,325 @@
+/*-----------------------------------------------------------------------------*/
+
+body {
+    background: #323232;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1CD6E3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #73EEF5;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+/*-----------------------------------------------------------------------------*/
+
+header {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.header-container {
+    width: 98%;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    position: relative;
+    top: 0px;
+    animation: wasa 1.5s;
+}
+
+@keyframes wasa {
+    0% {
+        top: -100px;
+    }
+
+    50% {
+        top: 10px;
+    }
+}
+
+.header-container h1 {
+    font-size: 22px;
+    width: fit-content;
+    text-shadow: 0 0 0 #fff;
+    font-family: sans-serif;
+    transition: all .5s ease;
+}
+
+.header-container h1:hover {
+    text-shadow: 0 0 10px #fff;
+    transition: all .5s ease;
+}
+
+.header-container h3 {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all .5s ease;
+}
+
+.header-container h3:hover {
+    color: #1CD6E3;
+    transition: all .5s ease;
+    border-bottom: 1px solid #1CD6E3;
+}
+
+.header-container img {
+    padding: 0;
+    margin: 0 10px 0 0;
+    height: 32px;
+    width: 32px;
+    position: relative;
+}
+
+.header-nav li {
+    display: inline-block;
+    width: auto;
+    padding: 0 6px;
+    margin: 0 6px;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.all {
+    background-color: #212121;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.all section {
+    background-color: #171717;
+    height: 78vh;
+    padding: 20px;
+    margin: 70px 70px 0px 70px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px#ffffff75;
+    overflow: hidden;
+}
+
+.end-site {
+    height: 80vh;
+}
+
+.end-site .end {
+    height: 55vh;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+footer {
+    background-color: #171717;
+    height: 20vh;
+    overflow: hidden;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.section-home {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: no-repeat url(https://m5s7j2f7.rocketcdn.me/wp-content/uploads/2022/04/disen%CC%83o-web-y-marketing.jpg);
+    background-size: 100% 100vh;
+}
+
+.home-container {
+    background-color: #323232c0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-container img {
+    padding: 0;
+    margin: 0px 20px;
+    right: 0;
+    height: 330px;
+    width: 330px;
+    position: absolute;
+    animation: slash 1s;
+}
+
+@keyframes slash {
+    0% {
+        right: -700px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+.home-container h1 {
+    padding: 0 0 0 10px;
+    margin: 0;
+    position: relative;
+    font-size: 40px;
+    font-family: sans-serif;
+    overflow: hidden;
+    animation: apear-1 1s;
+}
+
+@keyframes apear-1 {
+    0% {
+        right: 500px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+.home-container span {
+    text-shadow: 0 0 0 #fff;
+    transition: all .3s ease;
+    padding: 1px;
+}
+
+.home-container span:hover {
+    text-shadow: 0 0 6px #fff;
+    transition: all .3s ease;
+}
+
+.home-container h3 {
+    padding: 0 0 0 10px;
+    margin: 0;
+    position: relative;
+    color: #73EEF5;
+    font-size: 80px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: transparent .5s step-end, animation 3s steps(35) .9s, animation 1s step-start 3.8s infinite, transparent .5s step-end infinite alternate 4.7s;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    text-shadow: 0 0 10px #00000071;
+}
+
+@keyframes animation {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 585px;
+    }
+}
+
+@keyframes transparent {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.front-end-container {
+    padding: 0;
+    margin: 10px 20px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.home-container h4 {
+    padding: 0 0 0 10px;
+    margin: 0 10px 0 0;
+    position: relative;
+    font-size: 30px;
+    font-family: sans-serif;
+    overflow: hidden;
+    animation: apear-2 1s;
+}
+
+@keyframes apear-2 {
+    0% {
+        right: 500px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+.front-end_icons img {
+    display: inline;
+    margin: 0;
+    height: 45px;
+    width: 45px;
+    position: relative;
+    opacity: 0;
+    animation: apear-3 .5s 1s, stop 1s 1.2s step-start infinite;
+}
+
+@keyframes apear-3 {
+    0% {
+        left: -100px;
+    }
+
+    100% {
+        left: 0px;
+        opacity: .5;
+    }
+}
+
+@keyframes stop {
+    0% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
