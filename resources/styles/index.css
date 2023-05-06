@@ -12,6 +12,8 @@ body {
     -ms-user-select: none;
     user-select: none;
     overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 ::-webkit-scrollbar {
@@ -118,10 +120,14 @@ header {
     display: inline-block;
     width: auto;
     padding: 0 6px;
-    margin: 0 6px;
+    margin: 6px;
 }
 
 /*-----------------------------------------------------------------------------*/
+
+body ~section {
+    scroll-snap-align: start;
+}
 
 .all {
     background-color: #212121;
@@ -181,8 +187,8 @@ footer {
     padding: 0;
     margin: 0px 20px;
     right: 0;
-    height: 330px;
-    width: 330px;
+    height: 440px;
+    width: 440px;
     position: absolute;
     animation: slash 1s;
 }
@@ -256,7 +262,7 @@ footer {
     }
 
     100% {
-        width: 720px;
+        width: 675px;
     }
 }
 
