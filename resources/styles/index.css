@@ -12,6 +12,7 @@ body {
     -ms-user-select: none;
     user-select: none;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -35,12 +36,6 @@ a {
     color: #fff;
     padding: 0;
     margin: 0;
-}
-
-li {
-    list-style: none;
-    padding: 0;
-    margin: 0
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -120,12 +115,17 @@ header {
     overflow: hidden;
 }
 
-.header-nav li {
+.header-nav a {
     display: inline-block;
     overflow: hidden;
     width: auto;
     padding: 0;
     margin: auto 6px;
+}
+
+.active {
+    color: #fff;
+    border-bottom: 0px solid transparent;
 }
 
 /*-----------------------------------------------------------------------------*/
