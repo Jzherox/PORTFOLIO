@@ -263,7 +263,7 @@ footer {
     }
 
     100% {
-        width: 675px;
+        width: 680px;
     }
 }
 
@@ -339,7 +339,7 @@ footer {
     width: var(--sizeX);
     height: var(--sizeY);
     margin-left: var(sizeX / 2);
-    border: calc(var(--sizeX) / 10) solid var(--color);
+    border: calc(var(--sizeX) / 10) solid #fff;
     border-radius: 50px;
     box-sizing: border-box;
     margin-bottom: 16px;
@@ -357,7 +357,7 @@ footer {
     width: 6px;
     height: 6px;
     margin-left: -3px;
-    background-color: var(--color);
+    background-color: #fff;
     border-radius: 100%;
     animation: scrolldown-anim 2s infinite;
     box-sizing: border-box;
@@ -400,7 +400,7 @@ footer {
   .chevrondown {
     margin-top: -6px;
     position: relative;
-    border: solid var(--color);
+    border: 1px solid #fff;
     border-width: 0 3px 3px 0;
     display: inline-block;
     width: 10px;
