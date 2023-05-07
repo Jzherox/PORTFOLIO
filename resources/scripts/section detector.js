@@ -1,20 +1,32 @@
-let section = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+const sections = [...document.querySelectorAll('section')];
+const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
+
+const inView = (section) => {
+  let top = section.offsetTop;
+  let height = section.offsetHeight;
+
+  while (section.offsetParent) {
+    section = section.offsetParent;
+    top += section.offsetTop;
+  }
+
+  return (
+    top < window.pageYOffset + window.innerHeight &&
+    top + height > window.pageYOffset
+  );
+};
 
 window.onscroll = () => {
+  let next = false;
 
-        section.forEach(sec =>{
+  sections.forEach((section) => {
+    const a = getLinkById(section.id);
 
-        let top = window.scrollY;
-        let offset = sec.offsetTop;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id')
-
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(links =>{
-                links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ']').classList.add('active');
-            });
-        };
-    });
+    if (inView(section) && !next) {
+      a.classList.add('active');
+      next = true;
+    } else {
+      a.classList.remove('active');
+    }
+  });
 };
