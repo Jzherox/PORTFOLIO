@@ -99,54 +99,27 @@ header nav {
 }
 
 header nav a {
-    padding: 0; margin: 0;
+    padding: 4px; margin: 0;
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     transition: all .5s ease;
     overflow: hidden;
-    border-bottom: 1px solid transparent;
+    border: 2px solid transparent;
+    border-top-left-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;
 }
 
-header nav a.active, header nav a:hover {
+.active {
     color: #1CD6E3;
     transition: all .5s ease;
-    border-bottom: 1px solid #1CD6E3;
+    border: 2px solid #1CD6E3;
+    animation: traslate-line .5s;
 }
 
-/*-----------------------------------------------------------------------------*/
-
-.all {
-    background-color: #212121;
-    height: 100vh;
-    padding: 0; margin: 0;
-    overflow: hidden;
-}
-
-/*-----------------------------------------------------------------------------*/
-
-.all div {
-    padding: 20px; margin: 70px 70px 0px 70px;
-    background-color: #171717;
-    height: 78vh;
-    border-radius: 0px;
-    box-shadow: 10px 10px 0px #73EEF5;
-    overflow: hidden;
-}
-
-.end-site {
-    height: 80vh;
-}
-
-.end-site .end {
-    height: 55vh;
-}
-
-/*-----------------------------------------------------------------------------*/
-
-footer {
-    background-color: #171717;
-    height: 20vh;
-    overflow: hidden;
+header nav a:hover {
+    color: #73EEF5;
+    transition: all .5s ease;
+    border: 2px solid #73EEF5;
+    animation: traslate-line .5s;
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -401,3 +374,41 @@ footer {
         opacity: 0.5;
     }
 }
+
+/*-----------------------------------------------------------------------------*/
+
+.all {
+    background-color: #212121;
+    height: 100vh;
+    padding: 0; margin: 0;
+    overflow: hidden;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.all div {
+    padding: 20px; margin: 70px 70px 0px 70px;
+    background-color: #171717;
+    height: 78vh;
+    border-radius: 0px;
+    box-shadow: 10px 10px 0px #73EEF5;
+    overflow: hidden;
+}
+
+.end-site {
+    height: 80vh;
+}
+
+.end-site div {
+    height: 55vh;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+footer {
+    background-color: #171717;
+    height: 20vh;
+    overflow: hidden;
+}
+
+/*-----------------------------------------------------------------------------*/
