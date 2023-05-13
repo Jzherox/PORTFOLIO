@@ -132,7 +132,7 @@ header nav a:hover {
     height: 100vh;
     padding: 0; margin: 0;
     overflow: hidden;
-    background: no-repeat url(https://m5s7j2f7.rocketcdn.me/wp-content/uploads/2022/04/disen%CC%83o-web-y-marketing.jpg);
+    background: center no-repeat url(https://m5s7j2f7.rocketcdn.me/wp-content/uploads/2022/04/disen%CC%83o-web-y-marketing.jpg);
     background-size: 100% 100vh;
 }
 
@@ -206,7 +206,10 @@ header nav a:hover {
     font-size: 80px;
     font-family: sans-serif;
     letter-spacing: 3px;
-    animation: transparent .5s step-end, animation 3s steps(35) .9s, animation 1s step-start 3.8s infinite, transparent .5s step-end infinite alternate 4.7s;
+    animation: transparent .5s step-end,
+                 animation 3s steps(35) .9s,
+                 animation 1s step-start 3.8s infinite,
+                 transparent .5s step-end infinite alternate 4.7s;
     width: 0px;
     white-space: nowrap;
     overflow: hidden;
@@ -219,8 +222,12 @@ header nav a:hover {
         width: 0px;
     }
 
+    99% {
+        width: 675px;
+    }
+
     100% {
-        width: 680px;
+        width: fit-content;
     }
 }
 
@@ -284,6 +291,12 @@ header nav a:hover {
     100% {
         opacity: 1;
     }
+}
+
+.scrolldown-contain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .scrolldown {
@@ -393,10 +406,22 @@ header nav a:hover {
 .all div {
     padding: 20px; margin: 70px 70px 0px 70px;
     background-color: #171717;
-    height: 78vh;
-    border-radius: 0px;
-    box-shadow: 10px 10px 0px #73EEF5;
+    height: 76vh;
+    border-top: 8px solid #73EEF5;
+    border-left: 8px solid #73EEF5;
+    border-bottom: 8px solid #1CD6E3;
+    border-right: 8px solid #1CD6E3;
     overflow: hidden;
+    transition: all .5s ease;
+}
+
+.all div:hover {
+    background-color: #181818;
+    border-bottom: 8px solid #73EEF5;
+    border-right: 8px solid #73EEF5;
+    border-top: 8px solid #1CD6E3;
+    border-left: 8px solid #1CD6E3;
+    transition: all .5s ease;
 }
 
 .end-site {
