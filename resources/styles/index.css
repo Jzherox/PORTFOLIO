@@ -509,6 +509,8 @@ footer h5 {
     }
 }
 
+
+
 /*-----------------------------------------------------------------------------*/
 
 @media (max-width: 1100px) {
@@ -533,7 +535,7 @@ footer h5 {
 
     .home-container img {
         padding: 0; margin: 0;
-        height: 70%; width: auto;
+        height: 66%; width: auto;
         left: auto; right: auto;
         opacity: 20%;
         animation: none;
@@ -666,5 +668,124 @@ footer h5 {
         height: 20vh;
     }
 }
+
+@media (max-width: 320px) {
+    .home-container img {
+        height: 40%; width: auto;
+    }
+
+    .front-end_icons img {
+        height: 52px;
+        width: 52px;
+    }
+}
 /*-----------------------------------------------------------------------------*/
 
+@media (max-height: 380px) {
+    .all div {
+        height: 66vh;
+        width: 76%;
+    }
+
+    .home-container span {
+        font-size: 25px;
+    }
+
+    .home-container h3 {
+        font-size: 50px;
+    }
+
+    .front-end-container h4 {
+        font-size: 30px;
+    }
+
+    .home-container img {
+        height: 80%; width: auto;
+    }
+
+    .front-end_icons img {
+        height: 40px;
+        width: 40px;
+    }
+    .end-site {
+        height: 80vh;
+    }
+    
+    .end-site div {
+        height: 40vh;
+    }
+
+    footer {
+        padding: 0px 10px;
+        height: 20vh;
+    }
+
+    footer h3 {
+        font-size: 16px;
+        padding: 8px 0; margin: 5px 0;
+        width: auto;
+        font-family: sans-serif;
+        border-bottom: #fff solid 1px;
+    }
+    
+    footer h4 {
+        font-size: 10px;
+        padding: 0; margin: 0;
+        letter-spacing: 1px;
+    }
+    
+    footer h5 {
+        font-size: 10px;
+        padding: 5px 0; margin: 0;
+        text-align: center;
+    }
+
+    .footer-icons {
+        padding: 0; margin: 10px;
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        right: 0;
+    }
+    
+    .footer-icons img {
+        padding: 0; margin: 0;
+        height: 20px;
+        filter: invert(1);
+        border-radius: 8px;
+    }
+
+    .scrolldown {
+        --sizeX: 15px;
+        --sizeY: 30px;
+    }
+
+    .scrolldown-contain {
+        top: 84%;
+    }
+
+    .scrolldown::before {
+        bottom: 20px;
+        left: 60%;
+        width: 3px;
+        height: 3px;
+    }
+
+    .chevrons {
+        padding: 0; margin: 32px 0 0 -2.5px;
+        width: 17px;
+    }
+    
+    .chevrondown {
+        width: 8px;
+        height: 8px;
+    }
+
+    .home-container h3 {
+        white-space: nowrap;
+        animation: transparent .5s step-end,
+                     animation 3s steps(35) .9s,
+                     animation 1s step-start 3.8s infinite,
+                     transparent .5s step-end infinite alternate 4.7s;
+    }
+}
