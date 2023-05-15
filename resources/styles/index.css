@@ -148,8 +148,8 @@ header nav a:hover {
 .home-container img {
     padding: 0; margin: 0px 20px;
     right: 0;
-    height: 380px;
-    width: 380px;
+    height: 380px; width: 380px;
+    max-width: 96%; min-width: 250px;
     position: absolute;
     animation: slash 1s;
 }
@@ -222,12 +222,8 @@ header nav a:hover {
         width: 0px;
     }
 
-    99% {
-        width: 675px;
-    }
-
     100% {
-        width: fit-content;
+        width: 675px;
     }
 }
 
@@ -265,8 +261,8 @@ header nav a:hover {
 .front-end_icons img {
     padding: 0; margin: 0;
     display: inline;
-    height: 45px;
-    width: 45px;
+    height: 45px; width: 45px;
+    min-width: auto;
     position: relative;
     opacity: 0;
     animation: apear-3 .5s 1s, stop 1s 1.2s step-start infinite;
@@ -410,7 +406,7 @@ header nav a:hover {
 .all div {
     padding: 20px; margin: 10vh 0 30px 0;
     background-color: #171717;
-    height: 72%; width: 86%;
+    height: 76.5%; width: 80%;
     border-top: 8px solid #73EEF5;
     border-left: 8px solid #73EEF5;
     border-bottom: 8px solid #1CD6E3;
@@ -450,10 +446,10 @@ header nav a:hover {
 
 /*-----------------------------------------------------------------------------*/
 
-.FOOTER {
+footer {
     display: flex;
     flex-direction: column;
-    padding: 10px 10px 0 10px; margin: 0;
+    padding: 0 10px 0 10px; margin: 0;
     color: #838383;
     background-color: #171717;
     height: fit-content;
@@ -461,20 +457,35 @@ header nav a:hover {
     letter-spacing: 2px;
 }
 
-.footer-start {
+footer div:nth-child(1) {
     display: flex;
     align-items: center;
 }
 
-.FOOTER h3 {
-    padding: 10px 0; margin: 0;
+footer div:nth-child(1) h3 {
+    padding: 12px 0; margin: 0;
     width: 100%;
     font-size: 22px;
     font-family: sans-serif;
     border-bottom: #fff solid 1px;
 }
 
-.footer-copy {
+footer div:nth-child(1) div {
+    padding: 0; margin: 0 10px 0 0;
+    position: absolute;
+    height: auto;
+    width: fit-content;
+    right: 0;
+}
+
+footer div:nth-child(1) div img {
+    padding: 0; margin: 0 3px;
+    height: 30px;
+    filter: invert(1) brightness(50%);
+    border-radius: 10px;
+}
+
+footer div:nth-child(2) {
     padding: 0; margin: 0;
     display: flex;
     align-items: center;
@@ -482,35 +493,14 @@ header nav a:hover {
     width: 100%;
 }
 
-.FOOTER h5 {
+footer div:nth-child(2) h5 {
     padding: 5px 0; margin: 0;
     text-align: center;
     font-size: 16px;
 }
 
-.footer-icons div {
-    position: relative;
-    width: fit-content;
-    height: auto;
-    border: 0;
-}
-
-.footer-icons {
-    padding: 0; margin: 0 10px 0 0;
-    position: absolute;
-    height: fit-content;
-    width: fit-content;
-    right: 0;
-}
-
-.footer-icons img {
-    padding: 0; margin: 0;
-    height: 30px;
-    filter: invert(1) brightness(50%);
-    border-radius: 10px;
-}
-
 /*-----------------------------------------------------------------------------*/
+
 
 @media (max-height: 1850px) {
     .home-container img {
@@ -522,23 +512,6 @@ header nav a:hover {
         width: 50px;
     }
 }
-/*
-@media (max-height: 850px) {
-    .end-site {
-        height: 80vh;
-    }
-    
-    .end-site div {
-        height: 62vh;
-    }
-
-    footer {
-        height: 20vh;
-    }
-}
-*/
-
-
 
 @media (max-width: 1100px) {
 
@@ -588,6 +561,7 @@ header nav a:hover {
         display: inline;
     }
 
+
     @keyframes apear-3 {
         0% {
             top: -100px;
@@ -598,22 +572,6 @@ header nav a:hover {
             opacity: .5;
         }
     }
-
-    .all div {
-        height: 82vh;
-    }
-/*
-    .end-site {
-        height: 80vh;
-    }
-    
-    .end-site div {
-        height: 58vh;
-    }
-
-    footer {
-        height: 20vh;
-    }*/
 }
 
 @media (max-width: 768px) {
@@ -624,10 +582,6 @@ header nav a:hover {
     .front-end_icons img {
         height: 68px;
         width: 68px;
-    }
-
-    .all div {
-        width: 76%;
     }
 }
 
@@ -659,6 +613,10 @@ header nav a:hover {
         height: 62px;
         width: 62px;
     }
+
+    .all div {
+        height: 76.5%; width: 70%;
+    }
 }
 
 @media (max-width: 570px) {
@@ -666,12 +624,17 @@ header nav a:hover {
         display: none;
     }
 
-    .home-container span {
-        font-size: 25px;
-    }
-
+    
     .home-container h3 {
         font-size: 50px;
+    }
+
+    .home-container img {
+        height: 44%; width: auto;
+    }
+
+    .home-container span {
+        font-size: 25px;
     }
 
     .front-end-container h4 {
@@ -681,19 +644,28 @@ header nav a:hover {
     .front-end_icons img {
         height: 52px;
         width: 52px;
-    }/*
-
-    .end-site {
-        height: 80vh;
-    }
-    
-    .end-site div {
-        height: 60vh;
     }
 
-    footer {
-        height: 20vh;
-    }*/
+    footer div:nth-child(2) h5 {
+        padding: 5px 0; margin: 0;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    footer div:nth-child(1) div img {
+        padding: 0; margin: 0 3px;
+        height: 22px;
+        filter: invert(1) brightness(50%);
+        border-radius: 5px;
+    }
+
+    footer div:nth-child(1) h3 {
+        padding: 12px 0; margin: 0;
+        width: 100%;
+        font-size: 18px;
+        font-family: sans-serif;
+        border-bottom: #fff solid 1px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -704,6 +676,29 @@ header nav a:hover {
     .front-end_icons img {
         height: 52px;
         width: 52px;
+    }
+}
+
+@media (max-width: 280px) {
+    .home-container span {
+        font-size: 22px;
+    }
+
+    .home-container h3 {
+        font-size: 40px;
+    }
+
+    .front-end-container h4 {
+        font-size: 26px;
+    }
+
+    .home-container img {
+        height: 40%; width: 40%;
+    }
+
+    .front-end_icons img {
+        height: 42px;
+        width: 42px;
     }
 }
 
@@ -727,25 +722,12 @@ header nav a:hover {
     }
 
     .home-container img {
-        height: 80%; width: auto;
+        height: 80%;
     }
 
     .front-end_icons img {
-        height: 40px;
-        width: 40px;
-    }/*
-    .end-site {
-        height: 80vh;
+        height: 40px; width: 40px;
     }
-    
-    .end-site div {
-        height: 40vh;
-    }
-
-    footer {
-        padding: 0px 10px;
-        height: 20vh;
-    }*/
 
     footer h3 {
         font-size: 16px;
