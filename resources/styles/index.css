@@ -408,9 +408,9 @@ header nav a:hover {
 /*-----------------------------------------------------------------------------*/
 
 .all div {
-    padding: 20px; margin: 50px 0 0 0;
+    padding: 20px; margin: 10vh 0 30px 0;
     background-color: #171717;
-    height: 72vh; width: 86%;
+    height: 72%; width: 86%;
     border-top: 8px solid #73EEF5;
     border-left: 8px solid #73EEF5;
     border-bottom: 8px solid #1CD6E3;
@@ -428,47 +428,75 @@ header nav a:hover {
     transition: all .5s ease;
 }
 
+.end-contain {
+    padding: 0; margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr auto;
+}
+
 .end-site {
-    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
 }
 
 .end-site div {
-    height: 55vh;
+    margin: 10vh 0 30px 0;
+    height: 100%;
 }
 
 /*-----------------------------------------------------------------------------*/
 
-footer {
+.FOOTER {
     display: flex;
     flex-direction: column;
-    padding: 0 10px; margin: 0;
-    color: #c7c7c7;
+    padding: 10px 10px 0 10px; margin: 0;
+    color: #838383;
     background-color: #171717;
-    height: 20vh;
+    height: fit-content;
     overflow: hidden;
     letter-spacing: 2px;
 }
 
-footer h3 {
-    padding: 10px 0; margin: 10px 0;
-    width: auto;
+.footer-start {
+    display: flex;
+    align-items: center;
+}
+
+.FOOTER h3 {
+    padding: 10px 0; margin: 0;
+    width: 100%;
     font-size: 22px;
     font-family: sans-serif;
     border-bottom: #fff solid 1px;
 }
 
-footer h4 {
-    padding: 5px 0; margin: 0;
-    letter-spacing: 1px;
+.footer-copy {
+    padding: 0; margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-footer h5 {
+.FOOTER h5 {
     padding: 5px 0; margin: 0;
     text-align: center;
+    font-size: 16px;
+}
+
+.footer-icons div {
+    position: relative;
+    width: fit-content;
+    height: auto;
+    border: 0;
 }
 
 .footer-icons {
-    padding: 0; margin: 10px;
+    padding: 0; margin: 0 10px 0 0;
     position: absolute;
     height: fit-content;
     width: fit-content;
@@ -478,7 +506,7 @@ footer h5 {
 .footer-icons img {
     padding: 0; margin: 0;
     height: 30px;
-    filter: invert(1);
+    filter: invert(1) brightness(50%);
     border-radius: 10px;
 }
 
@@ -494,7 +522,7 @@ footer h5 {
         width: 50px;
     }
 }
-
+/*
 @media (max-height: 850px) {
     .end-site {
         height: 80vh;
@@ -508,10 +536,9 @@ footer h5 {
         height: 20vh;
     }
 }
+*/
 
 
-
-/*-----------------------------------------------------------------------------*/
 
 @media (max-width: 1100px) {
 
@@ -575,7 +602,7 @@ footer h5 {
     .all div {
         height: 82vh;
     }
-
+/*
     .end-site {
         height: 80vh;
     }
@@ -586,7 +613,7 @@ footer h5 {
 
     footer {
         height: 20vh;
-    }
+    }*/
 }
 
 @media (max-width: 768px) {
@@ -654,7 +681,7 @@ footer h5 {
     .front-end_icons img {
         height: 52px;
         width: 52px;
-    }
+    }/*
 
     .end-site {
         height: 80vh;
@@ -666,7 +693,7 @@ footer h5 {
 
     footer {
         height: 20vh;
-    }
+    }*/
 }
 
 @media (max-width: 320px) {
@@ -679,7 +706,7 @@ footer h5 {
         width: 52px;
     }
 }
-/*-----------------------------------------------------------------------------*/
+
 
 @media (max-height: 380px) {
     .all div {
@@ -706,7 +733,7 @@ footer h5 {
     .front-end_icons img {
         height: 40px;
         width: 40px;
-    }
+    }/*
     .end-site {
         height: 80vh;
     }
@@ -718,7 +745,7 @@ footer h5 {
     footer {
         padding: 0px 10px;
         height: 20vh;
-    }
+    }*/
 
     footer h3 {
         font-size: 16px;
@@ -726,12 +753,6 @@ footer h5 {
         width: auto;
         font-family: sans-serif;
         border-bottom: #fff solid 1px;
-    }
-    
-    footer h4 {
-        font-size: 10px;
-        padding: 0; margin: 0;
-        letter-spacing: 1px;
     }
     
     footer h5 {
